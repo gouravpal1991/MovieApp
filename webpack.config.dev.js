@@ -25,6 +25,7 @@ export default {
     ],
     module: {
         loaders: [
+           {test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader?name=/public/icons/[name].[ext]"},
             {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
             {test: /(\.css)$/, loaders: ['style', 'css']},
             {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
