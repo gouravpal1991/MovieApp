@@ -7,6 +7,7 @@ import {bindActionCreators} from 'redux';
 import * as moviesListActions from '../../../actions/moviesListActions';
 import MoviesListPresentation from '../presentation/MoviesListPresentation';
 import NoMovieFoundPresentation from '../presentation/NoMovieFoundPresentation';
+import ProgressView from '../../common/ProgressView';
 
 class MoviesList extends React.Component {
 
@@ -16,16 +17,22 @@ class MoviesList extends React.Component {
 
   render() {
     const {movies} = this.props;
+    debugger;
     return (
       <div>
-        {(movies.length > 0) ? <MoviesListPresentation movies={movies}/> : <NoMovieFoundPresentation/>}
+
+
+        {
+          (movies.isLoading == "true") ? <ProgressView/> :
+          (movies.Search.length > 0) ? <MoviesListPresentation movies={movies.Search}/> : <NoMovieFoundPresentation/>
+        }
       </div>
     );
   }
 }
 
 MoviesList.propTypes = {
-  movies: PropTypes.array.isRequired
+  movies: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state, ownProps) {

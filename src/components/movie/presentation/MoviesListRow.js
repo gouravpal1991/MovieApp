@@ -6,6 +6,7 @@ import {Link} from 'react-router';
 import defaultImage from '!!file!../../../images/showtime.jpg';
 
 const MovieListRow = ({movie}) =>{
+  debugger;
   return (
     <tr>
       <td><img src={movie.Poster==='N/A'?defaultImage:movie.Poster} alt={movie.Title} title={movie.Title}/> </td>
@@ -16,7 +17,7 @@ const MovieListRow = ({movie}) =>{
 };
 
 MovieListRow.propTypes={
-  movie:PropTypes.object.isRequired
+  movie:PropTypes.array.isRequired
 };
 
 export default MovieListRow;
