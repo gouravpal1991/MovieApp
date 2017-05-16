@@ -24,7 +24,7 @@ class HomePage extends React.Component {
     const {movie} = this.props;
 
     return (
-        <HomePagePresentation movie={movie}/>
+       <HomePagePresentation movie={movie}/>
     );
   }
 }
