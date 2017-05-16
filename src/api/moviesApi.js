@@ -8,7 +8,7 @@ class MoviesApi {
     return fetch('http://www.omdbapi.com/?s=' + movieName).then((response) => {
       return response.json();
     }).then(response => {
-      debugger;
+
       if (response.Response === "True") {
         response.isLoading = "false";
         return response;
@@ -19,7 +19,6 @@ class MoviesApi {
         return moviesList;
       }
     });
-
   }
 
   /* to get a movie details based on movieId*/

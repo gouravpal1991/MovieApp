@@ -17,7 +17,7 @@ class MoviesList extends React.Component {
 
   render() {
     const {movies} = this.props;
-    debugger;
+
     return (
       <div>
 

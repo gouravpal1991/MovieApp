@@ -6,7 +6,7 @@ import defaultImage from '!!file!../../../images/showtime.jpg';
 import ProgressView from '../../common/ProgressView'
 
 const HomePagePresentation = (movie) => {
-  debugger;
+
   return (
     <div id="homepagecontainer" className="jumbotron">
       {(movie.movie.isLoading == "true") ? <ProgressView/> :
