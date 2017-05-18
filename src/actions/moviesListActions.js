@@ -7,10 +7,14 @@ import moviesApi from '../api/moviesApi';
 export function loadMoviesSuccess(movies) {
   return {type: types.LOAD_MOVIES_SUCCESS, movies};
 }
+export function loadMoviesBegin() {
+  return {type: types.LOAD_MOVIES_BEGIN};
+}
 
 /*thunk: make async call to api*/
 export function loadMovies(movieName) {
   return function (dispatch) {
+    dispatch(loadMoviesBegin());
     return moviesApi.getAllMovies(movieName).then(movies => {
       dispatch(loadMoviesSuccess(movies));
       }).catch(error => {

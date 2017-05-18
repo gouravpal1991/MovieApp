@@ -3,7 +3,7 @@
  */
 import React, {PropTypes} from 'react';
 import defaultImage from '!!file!../../../images/showtime.jpg';
-import ProgressView from '../../common/ProgressView'
+import ProgressView from '../../common/ProgressView';
 
 const HomePagePresentation = (movie) => {
 

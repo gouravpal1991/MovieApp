@@ -8,7 +8,16 @@ export default function moviesReducer(state = initialState.movies, action) {
 
   switch (action.type) {
     case types.LOAD_MOVIES_SUCCESS:
-      return action.movies;
+      return {
+        ...state,
+        ...action.movies,
+        isLoading: false
+      };
+    case types.LOAD_MOVIES_BEGIN:
+      return {
+        ...state,
+        isLoading: true
+      };
     default:
       return state;
   }

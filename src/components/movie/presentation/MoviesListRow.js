@@ -17,7 +17,7 @@ const MovieListRow = ({movie}) =>{
 };
 
 MovieListRow.propTypes={
-  movie:PropTypes.array.isRequired
+  movie:PropTypes.object.isRequired
 };
 
 export default MovieListRow;

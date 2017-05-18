@@ -2,7 +2,7 @@
  * Created by gouravpal on 12/05/17.
  */
 import React from 'react';
-import logo from '!!file!../../images/showtime.jpg';
+import {logo} from '!!file!../../images/showtime.jpg';
 import {Link, IndexLink} from 'react-router';
 
 const Header = ({value, onChange, onSearch}) => {

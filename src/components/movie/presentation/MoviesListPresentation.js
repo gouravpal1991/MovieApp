@@ -29,7 +29,7 @@ const MoviesListPresentation = ({movies}) => {
 };
 
 MoviesListPresentation.propTypes = {
-  movies: PropTypes.object.isRequired
+  movies: PropTypes.array.isRequired
 };
 
 

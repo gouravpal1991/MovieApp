@@ -24,7 +24,7 @@ class MoviesList extends React.Component {
 
         {
           (movies.isLoading == "true") ? <ProgressView/> :
-          (movies.Search.length > 0) ? <MoviesListPresentation movies={movies.Search}/> : <NoMovieFoundPresentation/>
+          (movies.Search && movies.Search.length > 0) ? <MoviesListPresentation movies={movies.Search}/> : <NoMovieFoundPresentation/>
         }
       </div>
     );

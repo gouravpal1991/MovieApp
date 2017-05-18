@@ -8,13 +8,19 @@ export function loadMovieSuccess(movie) {
   return {type: types.LOAD_MOVIE_BY_ID_SUCCESS, movie};
 }
 
+export function loadMovieBegin() {
+  return {type: types.LOAD_MOVIE_BY_ID_BEGIN};
+}
+
 /*thunk: make async call to api*/
 export function loadMovie(movieId) {
   return function (dispatch) {
-    return moviesApi.getMovie(movieId).then(movie => {
-      dispatch(loadMovieSuccess(movie));
-    }).catch(error => {
-      throw (error);
-    });
+    dispatch(loadMovieBegin());
+    return moviesApi.getMovie(movieId)
+      .then(movie => {
+        dispatch(loadMovieSuccess(movie));
+      }).catch(error => {
+        throw (error);
+      });
   };
 }
