@@ -7,18 +7,13 @@ import HomePagePresentation from '../presentation/HomePagePresentation';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as homeActions from '../../../actions/homeActions';
-
+/*Its a container for landing screen.*/
 class HomePage extends React.Component {
 
-  constructor(props, context) {
-    super(props, context);
-  }
-
   componentDidMount() {
+    //default movie call
     this.props.actions.loadMovie("tt1440161");
   }
-
-
 
   render() {
     const {movie} = this.props;
@@ -34,16 +29,19 @@ HomePage.propTypes = {
   actions: PropTypes.object.isRequired
 };
 
+//to subscribe to store updates
 function mapStateToProps(state, ownProps) {
   return {
     movie: state.homeReducer
   };
 }
 
+//to bind action creators
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(homeActions, dispatch)
   };
 }
 
+//Connecting a React component to the Redux store
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

@@ -3,6 +3,7 @@
  */
 import React, {PropTypes} from 'react';
 
+/*It's a common presentational component, can be used to show progress bar in the screen.*/
 const ProgressView = () => {
 
   return (

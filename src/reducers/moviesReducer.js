@@ -3,7 +3,9 @@
  */
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
-
+/*
+ * reducer for MovieListPage
+ * */
 export default function moviesReducer(state = initialState.movies, action) {
 
   switch (action.type) {

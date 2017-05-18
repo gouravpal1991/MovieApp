@@ -5,6 +5,7 @@ import React from 'react';
 import {logo} from '!!file!../../images/showtime.jpg';
 import {Link, IndexLink} from 'react-router';
 
+/*It's a common presentational component.*/
 const Header = ({value, onChange, onSearch}) => {
   return (
     <div>

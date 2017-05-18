@@ -4,13 +4,13 @@
 import * as types from './actionTypes';
 import moviesApi from '../api/moviesApi';
 
-/*action will be called before loadmovie api call.
- It indicates that process has started*/
+/*action is called before getMovie api call.
+ It indicates that api call has started*/
 export function loadMovieBegin() {
   return {type: types.LOAD_MOVIE_BY_ID_BEGIN};
 }
 
-/*action will be called when getMovie function of moviesApi is successful.*/
+/*action is called when getMovie api is successful.*/
 export function loadMovieSuccess(movie) {
   return {type: types.LOAD_MOVIE_BY_ID_SUCCESS, movie};
 }
