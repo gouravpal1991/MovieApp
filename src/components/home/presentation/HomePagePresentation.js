@@ -5,6 +5,7 @@ import React, {PropTypes} from 'react';
 import defaultImage from '!!file!../../../images/showtime.jpg';
 import ProgressView from '../../common/ProgressView';
 
+/*Presentational component, accepts 1 prop as movie to display default movie*/
 const HomePagePresentation = (movie) => {
 
   return (
