@@ -4,6 +4,8 @@
 import * as types from './actionTypes';
 import moviesApi from '../api/moviesApi';
 
+/*action will be called before loadmovies api call.
+ It indicates that process has started*/
 export function loadMoviesSuccess(movies) {
   return {type: types.LOAD_MOVIES_SUCCESS, movies};
 }
